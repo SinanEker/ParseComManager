@@ -45,7 +45,7 @@ use Sly\ParseComManager\Query\Query;
 $manager = new Manager(array(
     'appID'        => 'XXXXX',
     'masterKey'    => 'XXXXX',
-    'apiKey'       => 'XXXXX',
+    'restKey'      => 'XXXXX',
     'sessionToken' => null, // Optional session token
 ));
 
