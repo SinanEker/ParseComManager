@@ -29,7 +29,7 @@ class Client
         if (
             null === $this->config['appID'] ||
             null === $this->config['masterKey'] ||
-            null === $this->config['apiKey']
+            null === $this->config['restKey']
         ) {
             throw new ConfigurationException('Bad configuration, see documentation');
         }
@@ -45,7 +45,7 @@ class Client
         return array(
             'appID'        => null,
             'masterKey'    => null,
-            'apiKey'       => null,
+            'restKey'       => null,
             'sessionToken' => null,
         );
     }
@@ -60,7 +60,7 @@ class Client
         $headers = array(
             'X-Parse-Application-Id' => $this->config['appID'],
             'X-Parse-Master-Key'     => $this->config['masterKey'],
-            'X-Parse-REST-API-Key'   => $this->config['apiKey'],
+            'X-Parse-REST-API-Key'   => $this->config['restKey'],
         );
 
         if ($this->config['sessionToken']) {
